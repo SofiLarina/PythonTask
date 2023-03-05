@@ -3,3 +3,13 @@
 Удалите второй элемент. Добавьте в конец ключ «new_key» со значением «new_value».
 Выведите на печать итоговый словарь. Важно, чтобы словарь остался тем же (имел тот же адрес в памяти).
 """
+inf = {0:0, 1: 1, 3: 3, 4: 4, 5: 5}
+
+first_key = list(inf.keys())[0]
+last_key = list(inf.keys())[-1]
+inf[first_key], inf[last_key]= inf[last_key],inf[first_key]
+
+inf.pop(1)
+inf[6] = 6
+
+print(inf)

@@ -8,3 +8,7 @@ emails = {'mgu.edu': ['andrei_serov', 'alexander_pushkin', 'elena_belova', 'kiri
       	'yandex.ru': ['ekaterina_ivanova', 'glebova_nastya'],
       	'harvard.edu': ['john.doe', 'mark.zuckerberg', 'helen_hunt'],
       	'mail.ru': ['roman.kolosov', 'ilya_gromov', 'masha.yashkina']}
+
+for key, value in emails.items():
+    for i in value:
+        print(f"{i}@{key}")
