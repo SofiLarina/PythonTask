@@ -19,16 +19,6 @@ English
 1 - [English]
 """
 
-# number = int(input())
-# plenty = int()
-# for i in range(number):
-#     plenty_l = int()
-#     number_l = int(input())
-#     for j in range(number_l):
-#         language = int(input())
-#         plenty_l().add
-
-
 plenty_union = set()
 plenty_intersection = set()
 
@@ -55,4 +45,3 @@ while numberStudent > count:
 
 print(f"{len(plenty_union)} - {plenty_union}")
 print(f"{len(plenty_intersection)} - {plenty_intersection}")
-
