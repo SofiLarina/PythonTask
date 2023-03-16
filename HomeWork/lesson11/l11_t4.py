@@ -5,7 +5,7 @@
 Формула определения ИМТ: index = weight / (height * height)
 """
 def IMB(weight:int,height:int):
-    return weight / (height * height)
+    return (weight / (height / 100) ** 2)
 
 def IMB_result(weight:int,height:int):
     result = IMB(weight,height)
