@@ -5,11 +5,11 @@
 а второе значение - все числа, превышающие среднее значение.
 Второе значение оформите в виде списка.
 """
-def cacluate(**args):
+def cacluate(*args):
     average = sum(args) / len(args)
     list = []
     for i in args:
         if i > average:
             list.append(i)
     return (average, list)
-print(cacluate)
+print(cacluate(1, 2, 5, 6))
