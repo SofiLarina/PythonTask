@@ -4,7 +4,6 @@
 и произвольное количество значений Цвет: HEX. Программа должна вывести все данные на экран.
 """
 
-#дописать с **kwargs
 import random
 
 def generate_hex_colors(color_word, num_colors):

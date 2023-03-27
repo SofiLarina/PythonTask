@@ -3,12 +3,14 @@ def router(request):
         timetable()
     elif "трен" in request:
         trainer()
-    elif "оплат" in request:
+    elif "плат" in request:
         payment()
     elif "меню" in request:
         menu()
-    elif "тест" in request:
-        tests()
+    elif "олимп" in request:
+        olimp()
+    elif "адрес" in request:
+        address()
     else:
         print("Вы ввели некорректный запрос")
 
@@ -20,5 +22,7 @@ def payment():
     print("Сумма к оплате занятия: 3000 р.")
 def menu():
     print("Меню в столовой сегодня: пюре, котлета, помидор")
-def tests():
-    print("Сегодня тесты по: алгебре, русскому")
+def olimp():
+    print("Сегодня олимпиады по: карате, гимнастике")
+def address():
+    print("Адреса ближайших спортзалов: Олимпийский проспек 1, Воскресенская 12")
