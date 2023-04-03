@@ -12,10 +12,14 @@ t = "Генератор – это итератор, элементы котор
 
 t = "Генератор – это итератор,\nэлементы которогоможно перебирать (итерировать) только один раз. Итератор – это объект, который поддерживает функцию next() для перехода к следующему элементу коллекции."
 
-def generator(string:str):
-    text = string.split( )
-    for i in text:
+def generator(t):
+    t = t.split()
+    for i in t:
         yield i
 
 for i in generator(t):
     print(i)
+"""
+gen = (i for i in t.split())
+print(next(gen))
+"""
