@@ -6,3 +6,19 @@
 словам и исключив из них пробелы и знаки препинания. Также при подсчете частоты появления слов
 в файле вам стоит игнорировать регистры
 """
+file = input("Введите имя файла: ")
+words = {}
+max = 0
+word = ""
+
+with open(file,"r") as fr:
+    for i in fr:
+        for j in i.lower().split():
+            words[j] = i.split().count(j)
+
+for key in words:
+    if int(words[key]) >= max:
+        max = words[key]
+        word = key
+
+print(f"Word: {word} Quantity: {max}")
