@@ -16,7 +16,7 @@ class Hero(Unit):
 
 class Soldier(Unit):
     def follow(self, hero):
-        print("Солдат", self.id, "следует за героем ", hero.name)
+        print("Солдат", self.id, "следует за героем", hero.name)
 
 Kaplan = Hero(1, 1, 1, "Каплан" )
 Areg = Hero(2, 2, 1, "Арег" )
@@ -39,5 +39,9 @@ else:
     Areg.lvlup()
 
 print("Уровень Каплана:", Kaplan.level, "\nУровень Арега:", Areg.level)
+team1[1].follow(team1[0])
+for i in team2[1::]: # срез списка от одного до конца
+    i.follow(team2[0])
+
 
 # print("Первая команда: ", team1, "\nВторая команда: ", team2)
