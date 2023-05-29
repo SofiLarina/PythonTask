@@ -31,5 +31,3 @@ v2 = Vector3D(4, 5, 6)
 print(v1 + v2)
 print(v1 - v2)
 print(v1 * v2)
-
-
