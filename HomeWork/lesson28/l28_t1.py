@@ -79,3 +79,17 @@ class User:
         for i in self.address:
             print("Город:", i.city)
 
+user1 = User()
+user1.set_profile("Арег", "Крдян", 16, "1234567890")
+
+user1.set_address("Сириус", "Ул. Воскресенская", 123456)
+user1.set_address("Санкт-Петербург", "Невский проспект", 654321)
+
+user1.set_role("Программист", 40)
+user1.set_role("Сетевой инженер", 35)
+
+user1.set_bank("1234 5678 9012 3456", 100000)
+
+user1.set_order("Ноутбук", "Доставка курьером", 50000)
+
+user1.show_city()
