@@ -13,3 +13,5 @@ super_dificult_dict = {
         }
     }
 }
+name = super_dificult_dict[1]["pochti"]["Esche chutka"][("Eto","Chto?","kortezh??")]["za chto???"][1][2][1]
+print(name)
