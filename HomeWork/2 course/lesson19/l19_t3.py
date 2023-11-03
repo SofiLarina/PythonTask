@@ -3,29 +3,30 @@
 Создайте функцию которая создает txt файл  по пути из очереди.
 Запустите все в разных потоках.
 """
-import os
-from threading import Thread
+from concurrent.futures import ThreadPoolExecutor
 from queue import Queue
 
-q = Queue()
 
-def read(path, q):
-    with open(path, "r") as f:
-        names = f.readlines()
-        for name in names:
+def read(file_path, q):
+    with open(file_path, "r") as f:
+        for name in f:
             name = name.strip()
-            file_path = os.path.join("/lesson19", name + ".txt")
-            q.put(file_path)
+            path = f"{name}.txt"
+            q.put(path)
 
-def create():
-    while not q.empty():
-        file_path = q.get()
-        with open(file_path, "w") as f:
-            f.write("Hello!")
+def create(file_path):
+    with open(file_path, "w") as f:
+        f.write("Hello!")
 
-th1 = Thread(target=read, args=("Names.txt", q))
-th2 = Thread(target=create)
-th1.start()
-th2.start()
-th1.join()
-th2.join()
+if __name__ == "__main__":
+    q = Queue()
+
+    with ThreadPoolExecutor() as executor:
+        executor.submit(read, "Names.txt", q)
+
+    with ThreadPoolExecutor() as executor:
+        while not q.empty():
+            file_path = q.get()
+            executor.submit(create, file_path)
+
+    print("Код был выполнен")

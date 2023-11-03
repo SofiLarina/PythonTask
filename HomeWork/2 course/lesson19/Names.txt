@@ -1,6 +1,6 @@
-Котик
-Собачка
-Олег
-Лягушка
-Змея
-Павлин
+Cat
+Dog
+Oleg
+Frog
+Snake
+Peacock
